@@ -95,11 +95,11 @@ $body$
         RAISE NOTICE '------------------------------------------------';
 
         start_time := clock_timestamp();
-        RAISE NOTICE '>> Truncating Table: bronze.erp_az12';
-        TRUNCATE TABLE bronze.erp_az12;
+        RAISE NOTICE '>> Truncating Table: bronze.erp_cust_az12';
+        TRUNCATE TABLE bronze.erp_cust_az12;
 
-        RAISE NOTICE '>> Inserting Data Into: bronze.erp_az12';
-        COPY bronze.erp_az12
+        RAISE NOTICE '>> Inserting Data Into: bronze.erp_cust_az12';
+        COPY bronze.erp_cust_az12
         FROM '/media/WindowsC/Users/MD Afrid Basha/My Drive/Important data/SQL/DataWarehouse-Project/datasets/source_erp/CUST_AZ12.csv'
         WITH (
             FORMAT csv,
@@ -180,8 +180,8 @@ SELECT * FROM bronze.crm_prd_info LIMIT 10;
 SELECT COUNT(*) FROM bronze.crm_sales_details;
 SELECT * FROM bronze.crm_sales_details LIMIT 10;
 
-SELECT COUNT(*) FROM bronze.erp_az12;
-SELECT * FROM bronze.erp_az12 LIMIT 10;
+SELECT COUNT(*) FROM bronze.erp_cust_az12;
+SELECT * FROM bronze.erp_cust_az12 LIMIT 10;
 
 SELECT COUNT(*) FROM bronze.erp_loc_a101;
 SELECT * FROM bronze.erp_loc_a101 LIMIT 10;
